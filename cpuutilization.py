@@ -27,13 +27,11 @@
 
 import os
 import sys
+import platform
 import subprocess
-
-import osinfo
 
 
 PY2 = sys.version_info[0] == 2
-OS_TYPE = osinfo.get_os_info()[0]
 
 def _chomp(s):
 	for sep in ['\r\n', '\n', '\r']:
@@ -137,7 +135,10 @@ def _run_and_get_stdout(command):
 		return None
 
 def get_utilization():
-	if OS_TYPE in osinfo.OSType.Linux or OS_TYPE in osinfo.OSType.Cygwin:
+	# Figure out the general OS type
+	uname = platform.system().lower().strip()
+
+	if 'linux' in uname or 'cygwin' in uname:
 		command = 'top -b -n 2 -d 1'
 		out = _run_and_get_stdout(command)
 
@@ -151,8 +152,9 @@ def get_utilization():
 		float(out[0].split('us')[0]) + \
 		float(out[1].split('sy')[0]) + \
 		float(out[2].split('ni')[0])
+
 		return speed
-	elif OS_TYPE in osinfo.OSType.BSD:
+	elif 'bsd' in uname:
 		command = 'top -b -P -s 2 -d 2'
 		out = _run_and_get_stdout(command)
 
@@ -166,8 +168,9 @@ def get_utilization():
 		float(out[0].split('% user')[0]) + \
 		float(out[1].split('% nice')[0]) + \
 		float(out[2].split('% system')[0])
+
 		return speed
-	elif OS_TYPE in osinfo.OSType.MacOS:
+	elif 'darwin' in uname:
 		command = 'top -F -l 2 -i 2 -n 0'
 		out = _run_and_get_stdout(command)
 
@@ -180,8 +183,9 @@ def get_utilization():
 		speed = \
 		float(out[0].split('% user')[0]) + \
 		float(out[1].split('% sys')[0])
+
 		return speed
-	elif OS_TYPE in osinfo.OSType.Solaris:
+	elif 'solaris' in uname or 'sunos' in uname:
 		command = 'top -b -s 2 -d 2'
 		out = _run_and_get_stdout(command)
 
@@ -195,8 +199,9 @@ def get_utilization():
 		float(out[0].split('% user')[0]) + \
 		float(out[1].split('% nice')[0]) + \
 		float(out[2].split('% kernel')[0])
+
 		return speed
-	elif OS_TYPE in osinfo.OSType.BeOS:
+	elif 'beos' in uname or 'haiku' in uname:
 		command = 'top -d -i 2 -n 2'
 		out = _run_and_get_stdout(command)
 
@@ -207,8 +212,9 @@ def get_utilization():
 
 		# Add the percentages to get the real cpu usage
 		speed = float(out[-1])
+
 		return speed
-	elif OS_TYPE in osinfo.OSType.Windows:
+	elif 'windows' in uname:
 		command = 'wmic cpu get loadpercentage'
 		out = _run_and_get_stdout(command)
 
@@ -217,6 +223,7 @@ def get_utilization():
 
 		# Add the percentages to get the real cpu usage
 		speed = float(out)
+
 		return speed
 
 
