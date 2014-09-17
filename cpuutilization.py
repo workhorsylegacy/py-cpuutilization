@@ -196,9 +196,9 @@ def get_utilization():
 
 		# Add the percentages to get the real cpu usage
 		speed = \
-		float(out[0].split('% user')[0]) + \
-		float(out[1].split('% nice')[0]) + \
-		float(out[2].split('% kernel')[0])
+		float(out[1].split('% user')[0]) + \
+		float(out[2].split('% kernel')[0]) + \
+		float(out[3].split('% iowait')[0])
 
 		return speed
 	elif 'beos' in uname or 'haiku' in uname:
