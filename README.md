@@ -16,4 +16,3 @@ Run as a script
 
     from cpuutilization import cpuutilization
     print(cpuutilization.get_utilization())
-
