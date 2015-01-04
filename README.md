@@ -14,5 +14,7 @@ supports. Works on Linux, OS X, Windows, BSD, Solaris, Cygwin, and Haiku.
 Run as a script
 -----
 
+~~~python
     from cpuutilization import cpuutilization
     print(cpuutilization.get_utilization())
+~~~

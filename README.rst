@@ -11,7 +11,7 @@ Cygwin, and Haiku.
 Run as a script
 ---------------
 
-::
+.. code-block:: python
 
     from cpuutilization import cpuutilization
     print(cpuutilization.get_utilization())
