@@ -136,7 +136,7 @@ def _run_and_get_stdout(command):
 
 def get_utilization():
 	# Figure out the general OS type
-	uname = platform.system().lower().strip()
+	uname = platform.system().strip().strip('"').strip("'").strip().lower()
 
 	if 'linux' in uname or 'cygwin' in uname:
 		command = 'top -b -n 2 -d 1'
