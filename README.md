@@ -1,6 +1,42 @@
 py-cpuutilization
 =================
 
+ &nbsp;
+ 
+ &nbsp;
+
+
+:warning: :warning: :warning: :warning: :warning: :warning: :warning: :warning:
+:warning: :warning: :warning: :warning: :warning: :warning: :warning: :warning:
+:warning: :warning: :warning: :warning: :warning: :warning: :warning: :warning:
+
+:warning: :warning: :warning: :warning: :warning: :warning: :warning: :warning:
+:warning: :warning: :warning: :warning: :warning: :warning: :warning: :warning:
+:warning: :warning: :warning: :warning: :warning: :warning: :warning: :warning:
+
+!!! WARNING !!!
+=========
+
+As of September 2017, this project is deprecated.
+
+
+ 
+ :warning: :warning: :warning: :warning: :warning: :warning: :warning: :warning:
+ :warning: :warning: :warning: :warning: :warning: :warning: :warning: :warning:
+ :warning: :warning: :warning: :warning: :warning: :warning: :warning: :warning:
+
+:warning: :warning: :warning: :warning: :warning: :warning: :warning: :warning:
+:warning: :warning: :warning: :warning: :warning: :warning: :warning: :warning:
+:warning: :warning: :warning: :warning: :warning: :warning: :warning: :warning:
+ 
+ &nbsp;
+ 
+ &nbsp;
+ 
+ &nbsp;
+ 
+ &nbsp;
+
 [![Downloads](https://pypip.in/d/py-cpuutilization/badge.png?period=month)](https://pypi.python.org/pypi/py-cpuutilization/)
 [![Latest Version](https://pypip.in/v/py-cpuutilization/badge.png)](https://pypi.python.org/pypi/py-cpuutilization/)
 [![License](https://pypip.in/license/py-cpuutilization/badge.png)](https://pypi.python.org/pypi/py-cpuutilization/)
