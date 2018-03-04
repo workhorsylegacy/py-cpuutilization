@@ -37,9 +37,8 @@ As of September 2017, this project is deprecated.
  
  &nbsp;
 
-[![Downloads](https://pypip.in/d/py-cpuutilization/badge.png?period=month)](https://pypi.python.org/pypi/py-cpuutilization/)
-[![Latest Version](https://pypip.in/v/py-cpuutilization/badge.png)](https://pypi.python.org/pypi/py-cpuutilization/)
-[![License](https://pypip.in/license/py-cpuutilization/badge.png)](https://pypi.python.org/pypi/py-cpuutilization/)
+[![Latest Version](https://img.shields.io/pypi/v/py-cpuutilization.svg)](https://pypi.python.org/pypi/py-cpuutilization/)
+[![License](https://img.shields.io/pypi/l/py-cpuutilization.svg)](https://pypi.python.org/pypi/py-cpuutilization/)
 
 A module for getting the CPU utilization on any OS with Python 2 & 3
 
